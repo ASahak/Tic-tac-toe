@@ -1,0 +1,175 @@
+
+.table{
+    width: auto;
+    border: none;
+}
+.table td:first-child{
+    border-left: none;
+    border-left: none;
+    
+}
+.table tr:last-child td{
+    border-bottom: none;
+}
+.table td, .table th{
+    border-top: none;
+    border-right: none;
+    height: 70px !important;
+    width: 70px !important;
+    font-size: 25px;
+    padding: 0;
+}
+.green_bg{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 55px 55px;
+    background: #14BDAC;
+}
+.user_png{
+    max-width: 50px;
+}
+.arang > span{
+    width:calc(50% - 5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 2px solid #14BDAC;   
+}
+.arang {
+    width: 40%;
+
+}
+.you_result{
+    height: 50px;
+    font-size: 33px;
+    font-weight: 600;
+}
+.butts button{
+    background: #14BDAC;
+    color: #fff;
+    cursor: pointer;
+}
+.butts{
+    position: relative;
+    top: 0;
+    transition: 1s;
+}
+
+.chart {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 80%
+}
+.pos_bas_heart{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    background: #232f2ebf;
+    color: #fff;
+}
+
+.outer {
+  fill: url(#image-4);
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-dasharray: 600;
+  transition: stroke-dashoffset .2s;
+  -webkit-animation-play-state: running;
+}
+
+
+/* END Circle colors and graphic positions */
+
+
+/* Set the initial values for the animation */
+.chart[data-percent='100'] .outer {
+  stroke-dashoffset: 0;
+  animation: show100 2s;
+}
+
+/* Keyframes for the initial animation */
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 595;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.x{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: block;
+    top: 10px;
+    left: 10px;
+}
+.x1{
+    height: 4px;
+    width: 100%;
+    display: block;
+    background: #545454;
+    animation-name: rot;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    top: 5px;
+    position: absolute;
+    left: 7px;
+}
+.x2{
+    left: -7px;
+    position:absolute;
+    top: 5px;
+    height: 4px;
+    width: 100%;
+    display: block;
+    background: #545454;
+    animation-name: rot2;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+@keyframes rot {
+    from{
+        opacity: 0;
+        transform-origin:left;
+        transform: rotate(90deg);    
+    }
+    to{
+        opacity:1;
+        transform-origin:left;
+        transform: rotate(45deg);    
+    }
+}
+
+@keyframes rot2 {
+    from{
+        opacity:0;
+        transform-origin:right;
+        transform: rotate(-90deg);    
+    }
+    to{
+        opacity:1;
+        transform-origin:right;
+        transform: rotate(-45deg);    
+    }
+}
+
+@media screen and (max-width:576px) {
+    .arang{
+        width: 100%;
+    }
+}
